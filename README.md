@@ -14,18 +14,14 @@ sudo apt update && sudo apt upgrade -y && sudo apt install unzip -y && sudo apt 
 
 Enter Tradingview Alerts Message in the Following Format
 
-Example to long SUSHI-PERP
-'{'contract': 'SUSHI-PERP', 'side': 'buy'}'
+Example to long SUSHI-PERP: '{'contract': 'SUSHI-PERP', 'side': 'buy'}'
 
-Example to short BTC-PERP
-'{'contract': 'BTC-PERP', 'side': 'sell'}'
+Example to short BTC-PERP: '{'contract': 'BTC-PERP', 'side': 'sell'}'
 
-Example to execute stop order on UNI-PERP
-'{'contract': 'UNI-PERP', 'side': 'stop'}'
+Example to execute stop order on UNI-PERP: '{'contract': 'UNI-PERP', 'side': 'stop'}'
 
 You can also use subaccounts by adding the 'subaccount' dictionary key to your TV Alert Msg
-Example to long SOL-PERP on 'UpOnly' Subaccount
-'{'contract': 'SOL-PERP', 'side': 'buy', 'subaccount': 'UpOnly'}'
+Example to long SOL-PERP on 'UpOnly' Subaccount: '{'contract': 'SOL-PERP', 'side': 'buy', 'subaccount': 'UpOnly'}'
 
 Input the http address from your ngrok tunnel to the webhook alert section of
 the Tradingview Alert, and add /webhook to the end
