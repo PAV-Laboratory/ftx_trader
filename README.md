@@ -8,6 +8,8 @@ Webhook TradingView Alert order execution for FTX Leveraged Contracts
 
 Create a new screen session > screen -S FTX-Trader
 
+Enter your api key and api secret on lines 19 and 20 of ftx_webhook_functions.py
+
 Run the following one-liner, replacing <YOUR_NGROK_AUTHTOKEN> with your token
 
 sudo apt update && sudo apt upgrade -y && sudo apt install unzip -y && sudo apt install python3.7 -y && sudo apt-get install python3-pip -y && sudo apt-get install python3-venv -y && git clone https://github.com/zalzibab/ftx_trader.git && cd ftx_trader && python3 -m venv env && source env/bin/activate && python -m pip install -r requirements.txt && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && ./ngrok authtoken <YOUR_NGROK_AUTHTOKEN> && ./ngrok http 5000
