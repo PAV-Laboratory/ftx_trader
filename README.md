@@ -8,7 +8,7 @@ Webhook TradingView Alert order execution for FTX Leveraged Contracts
 
 Create a new screen session > screen -S FTX-Trader
 
-Enter your api key and api secret on lines 19 and 20 of ftx_webhook_functions.py
+Don't forget to enter your api key and api secret on lines 19 and 20 of ftx_webhook_functions.py after git pull and before running webhook app
 
 Run the following one-liner, replacing <YOUR_NGROK_AUTHTOKEN> with your token
 
@@ -16,20 +16,20 @@ sudo apt update && sudo apt upgrade -y && sudo apt install unzip -y && sudo apt 
 
 Enter Tradingview Alerts Message in the Following Format
 
-Example to long SUSHI-PERP: '{'contract': 'SUSHI-PERP', 'side': 'buy'}'
+Example to long SUSHI-PERP: {'contract': 'SUSHI-PERP', 'side': 'buy'}
 
-Example to short BTC-PERP: '{'contract': 'BTC-PERP', 'side': 'sell'}'
+Example to short BTC-PERP: {'contract': 'BTC-PERP', 'side': 'sell'}
 
-Example to execute stop order on UNI-PERP: '{'contract': 'UNI-PERP', 'side': 'stop'}'
+Example to execute stop order on UNI-PERP: {'contract': 'UNI-PERP', 'side': 'stop'}
 
 You can also use subaccounts by adding the 'subaccount' dictionary key to your TV Alert Msg
-Example to long SOL-PERP on 'UpOnly' Subaccount: '{'contract': 'SOL-PERP', 'side': 'buy', 'subaccount': 'UpOnly'}'
+Example to long SOL-PERP on 'Test' Subaccount: {'contract': 'SOL-PERP', 'side': 'buy', 'subaccount': 'Test'}
 
 Input the http address from your ngrok tunnel to the webhook alert section of
 the Tradingview Alert, and add /webhook to the end
 
 Create a new screen within active session
 
-source env/bin/activate && python ftx_webhook_app.py
+cd ftx_trader && source env/bin/activate && python ftx_webhook_app.py
 
 Detach from screen session
